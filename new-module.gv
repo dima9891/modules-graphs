@@ -58,21 +58,21 @@ digraph famely {
     lesha -> { nina2 misha[color=lightblue] andrey[color=lightblue] }
     nina2[label="Нина"; color=pink;]
 
-    subgraph cluster_hobby {
-        label=Hobbies
-        node [shape=rectangle]
-        hobby
-        hobby -> it [label="Куда ж без компьютеров?"]
-        it -> programming [label="Программист из меня хоть куда!"]
-        it -> games [label="Люблю rpg-шки"]
-        programming -> linux
-        cpp[label="C++"]
-        programming -> cpp
-        games -> TES
-        games -> StarCraft
-        TES -> Skyrim
-        TES -> Morrowind
-    }
+//    subgraph cluster_hobby {
+//      label=Hobbies
+//        node [shape=rectangle]
+//        hobby
+//        hobby -> it [label="Куда ж без компьютеров?"]
+//        it -> programming [label="Программист из меня хоть куда!"]
+//        it -> games [label="Люблю rpg-шки"]
+//        programming -> linux
+//        cpp[label="C++"]
+//        programming -> cpp
+//        games -> TES
+//        games -> StarCraft
+//        TES -> Skyrim
+//        TES -> Morrowind
+//    }
 
 
 }
