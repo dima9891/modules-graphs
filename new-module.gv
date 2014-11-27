@@ -33,7 +33,7 @@ digraph famely {
     }
 
     mariya -> o
-    o[lablel="Ольга"; color=pink;]
+    o[label="Ольга"; color=pink;]
 
     subgraph cluster_3 {
         sergey[color=lightblue]
