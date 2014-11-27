@@ -1,0 +1,74 @@
+digraph famely {
+    style=filled
+    node [style=filled; shape=oval]
+
+    i[label="ilya"; color=lightblue]
+    v[label="valera"; color=lightblue]
+    i -> hobby [label="Люблю я это дело:"]
+
+    subgraph cluster_0 {
+        style=filled
+        m[label="mother"; color=pink; wight=1]
+        f[label="father"; color=lightblue; weight=1]
+    }
+
+    f -> { i v }
+    ded_i[label="Дед Илья"; color=lightblue;]
+    ded_g[label="Дед Гриша"; color=lightblue;]
+
+    subgraph cluster_1 {
+        ded_v[label="Дед Володя"; color=lightblue;]
+        bab_f[label="Баба Фекла"; color=pink;]
+    }
+
+    ded_i -> ded_v
+    ded_g -> bab_f
+    ded_v -> { f nina1 misha1 kolya[color=lightblue] mariya }
+    misha1[label="Дядя Миша"; color=lightblue;]
+
+    subgraph cluster_2 {
+        mariya[label="Тетя Мария"; color=pink]
+    }
+
+    mariya -> o
+    o[lablel="Ольга"; color=pink;]
+
+    subgraph cluster_3 {
+        sergey[color=lightblue]
+        nina1[label="Нина Колесникович"; color=pink;]
+    }
+
+    sergey -> { pavlik[color=lightblue] tanya[color=pink;]}
+
+    subgraph cluster_4 {
+        ded_a[label="Дед Андрей"; color=lightblue; color=lightblue;]
+        bab_v[label="Баба Варя"; color=pink]
+    }
+
+    ded_a -> { m misha2 lesha }
+    misha2[label="Дядя Миша"; color=lightblue;]
+
+    subgraph cluster_5 {
+        lesha[color=lightblue]
+        olga[color=pink]
+    }
+
+    lesha -> { nina2 misha[color=lightblue] andrey[color=lightblue] }
+    nina2[label="Нина"; color=pink;]
+
+    subgraph cluster_hobby {
+        label=Hobbies
+        node [shape=rectangle]
+        hobby
+        hobby -> it [label="Куда ж без компьютеров?"]
+        it -> programming [label="Программист из меня хоть куда!"]
+        it -> games [label="Люблю rpg-шки"]
+        programming -> linux
+        cpp[label="C++"]
+        programming -> cpp
+        games -> TES
+        games -> StarCraft
+        TES -> Skyrim
+        TES -> Morrowind
+    }
+}
