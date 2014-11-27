@@ -6,7 +6,7 @@ digraph famely {
 
     i[label="ilya"; color=lightblue]
     v[label="valera"; color=lightblue]
-    i -> hobby [label="Люблю я это дело:"]
+    i -> hobby [label="Люблю я это дело!!!:"]
 
     subgraph cluster_0 {
         style=filled
@@ -73,4 +73,6 @@ digraph famely {
         TES -> Skyrim
         TES -> Morrowind
     }
+
+
 }
