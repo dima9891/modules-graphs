@@ -67,11 +67,15 @@ digraph famely {
         it -> games [label="Люблю rpg-шки"]
         programming -> linux
         cpp[label="C++"]
+        cpp -> boost
+        cpp -> stl
+        stl -> { vector, map, set, multiset, multimap, list }
         programming -> cpp
         games -> TES
         games -> StarCraft
         TES -> Skyrim
         TES -> Morrowind
+        TES -> Tribunal
     }
 
 
