@@ -1,13 +1,17 @@
 digraph
 {
-    ranksep="1.4"
-    ratio="auto"
-    overlap=false
+    graph[
+        len=1
+        overlap=false
+        splines=true
+        ranksep="1.4"
+        ratio="0.5"
+    ]
     node[shape=box fillcolor=transparent]
 
     //Игроки
     {
-    node[shape=invhouse style=filled fillcolor=yellowgreen root=""]
+    node[shape=invhouse style=filled fillcolor=yellowgreen root=true]
     "Журналист"
     "Зараженная"
     "Смертельно больной"
@@ -32,13 +36,16 @@ digraph
 
     //Организации
     {
-    node[shape=hexagon style=filled fillcolor=lightgrey]
+    node[shape=Mdiamond style=filled fillcolor=lightgrey]
     "Вентру"
     "Тремер"
     }
 
     //Места
+    {
+    node[shape=component style=filled fillcolor=grey]
     "Ночной клуб"
+    }
 
     node[shape=box fillcolor=transparent]
 
@@ -49,6 +56,7 @@ digraph
 
     //Описываем НПС и их аспекты
     subgraph cluster_ventru {
+        edge[weight=0.1]
         ratio=same
         "Вентру" -> { "Арман" "Орландо" "Анна Фон Браун" }
 
@@ -57,7 +65,7 @@ digraph
                     "Князь Нью-Йорка"
                     "Бездушный"
                     "Любит искусство"
-                }
+                }[weight=1]
             }
         subgraph cluster_orlando {
                 "Орландо" -> {
